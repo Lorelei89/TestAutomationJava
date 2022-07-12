@@ -30,14 +30,20 @@ public class HomePage {
         return new KeyPressesPage(driver);
     }
 
-    private void clickLink(String linkText){
-        driver.findElement(By.linkText(linkText)).click();
-    }
-
     public ForgotPasswordPage clickForgotPassword(){
         clickLink("Forgot Password");
         return new ForgotPasswordPage(driver);
     }
+
+    public HorizontalSliderPage clickHorizontalSlider(){
+        clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+    private void clickLink(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
+    }
+
+
 
 
 }
