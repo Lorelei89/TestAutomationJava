@@ -6,6 +6,7 @@ Automated tests for: https://the-internet.herokuapp.com/
 * Selenium Webdriver
 * Maven 
 * IntelliJ
+* POM (Page Object Model)
 
 ▶️ Pages tested so far:
 
