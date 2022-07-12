@@ -8,8 +8,8 @@ Automated tests for: https://the-internet.herokuapp.com/
 * IntelliJ
 * POM (Page Object Model)
 
-▶️ Pages tested so far:
-
+▶️  
+Pages tested so far:
 * Dropdown 
 * Forgot Password
 * Hovers
