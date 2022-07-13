@@ -10,44 +10,41 @@ public class HoversPage {
     private By figureBox = By.className("figure");
     private By boxCapture = By.className("figcaption");
 
-    public HoversPage(WebDriver driver){
+    public HoversPage(WebDriver driver) {
         this.driver = driver;
     }
-    /**
-     * @param index starts at 1
-     * @return
-     */
 
-    public FigureCaption hoverOverFigure(int index){
-        WebElement figure = driver.findElements(figureBox).get(index -1);
+    public FigureCaption hoverOverFigure(int index) {
+        WebElement figure = driver.findElements(figureBox).get(index - 1);
         Actions actions = new Actions(driver);
         actions.moveToElement(figure).perform();
         return new FigureCaption(figure.findElement(boxCapture));
     }
 
-    public class FigureCaption{
+    public class FigureCaption {
         private WebElement caption;
         private By header = By.tagName("h5");
         private By link = By.tagName("a");
 
-        public FigureCaption(WebElement caption){
+        public FigureCaption(WebElement caption) {
             this.caption = caption;
         }
 
-        public boolean isCaptionDisplayed(){
+        public boolean isCaptionDisplayed() {
             return caption.isDisplayed();
         }
 
-        public String getTitle(){
+        public String getTitle() {
             return caption.findElement(header).getText();
         }
 
-        public String getLink(){
+        public String getLink() {
             return caption.findElement(link).getAttribute("href");
         }
 
-        public String getLinkText(){
+        public String getLinkText() {
             return caption.findElement(link).getText();
         }
     }
+
 }

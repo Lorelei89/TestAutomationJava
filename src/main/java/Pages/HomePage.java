@@ -39,11 +39,34 @@ public class HomePage {
         clickLink("Horizontal Slider");
         return new HorizontalSliderPage(driver);
     }
+
+    public AlertsPage clickAlertsPage(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
+
+    public FileUploadsPage clickFileUploadsPage(){
+        clickLink("File Upload");
+        return new FileUploadsPage(driver);
+    }
+
+    public EnterAdPage clickEnterAdPage(){
+        clickLink("Entry Ad");
+        return new EnterAdPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenuPage(){
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
+    public WysiwyngEditorPage clickWysiwyngEditorPage(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwyngEditorPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
-
-
-
-
+    
 }
