@@ -18,6 +18,7 @@ public class BaseTests {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
+        // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); - it's deprecated
         goHome();
         homePage = new HomePage(driver);
     }
