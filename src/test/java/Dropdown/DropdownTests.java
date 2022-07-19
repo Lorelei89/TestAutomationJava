@@ -17,4 +17,5 @@ public class DropdownTests extends BaseTests {
         assertEquals(selectedOptions.size(),1,"Incorrect number of selections");
         assertTrue(selectedOptions.contains(option));
     }
+
 }
